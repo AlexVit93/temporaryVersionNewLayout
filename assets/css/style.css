@@ -536,3 +536,245 @@ body {
   max-width: 260px;
   font-weight: 300;
 }
+
+.our__sertificates {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.our__sertificates-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.our__sertificates-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.our__sertificates-image {
+  width: 210px;
+  height: auto;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.our__sertificates-image:hover {
+  transform: scale(1.1);
+}
+
+.zoomable-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-color);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.zoomable-overlay.active {
+  display: flex;
+}
+
+.zoomable-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.zoomable-overlay img.active {
+  transition: transform 0.3s ease, opacity 0.4s ease;
+  opacity: 1;
+  transform: translateX(0) scale(var(--scale, 1));
+}
+
+.zoomable-overlay img.exit-left {
+  transform: translateX(-100%) scale(var(--scale, 1));
+  opacity: 0;
+}
+
+.zoomable-overlay img.exit-right {
+  transform: translateX(100%) scale(var(--scale, 1));
+  opacity: 0;
+}
+
+.zoomable-overlay .transition-image {
+  position: absolute;
+  max-width: 90%;
+  max-height: 90%;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.zoomable-overlay .enter-left {
+  animation: enterFromLeft 0.4s forwards;
+}
+
+.zoomable-overlay .enter-right {
+  animation: enterFromRight 0.4s forwards;
+}
+
+@keyframes enterFromLeft {
+  from {
+    transform: translateX(-100%) scale(1);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromRight {
+  from {
+    transform: translateX(100%) scale(1);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.zoomable-overlay .controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.zoomable-overlay .zoom {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.zoomable-overlay .zoom::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('data:image/svg+xml;utf8,<svg class="icon-increase" width="20" height="20" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.832%2022L17.8592%2017.0273" stroke="%23000000" stroke-width="2" stroke-linecap="square"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.58591%203.7511C0.917768%207.41924%200.917768%2013.367%204.58591%2017.0352C8.25405%2020.7033%2014.2019%2020.7033%2017.87%2017.0352C21.5381%2013.367%2021.5381%207.41924%2017.87%203.7511C14.2019%200.0829653%208.25405%200.0829653%204.58591%203.7511Z" stroke="%23000000" stroke-width="2"></path><path d="M6.25781%2010.3931H16.2035" stroke="%23000000" stroke-width="2"></path><path d="M11.2305%2015.3662V5.42053" stroke="%23000000" stroke-width="2"></path></svg>')
+    no-repeat center;
+  background-size: 20px 20px;
+}
+
+.zoomable-overlay .zoom.zoom-out::before {
+  background: url('data:image/svg+xml;utf8,<svg class="icon-decrease" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.9961%2022L17.0233%2017.0273" stroke="%23000000" stroke-width="2" stroke-linecap="square"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3.74997%203.7511C0.0818308%207.41924%200.0818308%2013.367%203.74997%2017.0352C7.41811%2020.7033%2013.3659%2020.7033%2017.0341%2017.0352C20.7022%2013.367%2020.7022%207.41924%2017.0341%203.7511C13.3659%200.0829653%207.41811%200.0829653%203.74997%203.7511Z" stroke="%23000000" stroke-width="2"></path><path d="M5.41797%2010.3931H15.3637" stroke="%23000000" stroke-width="2"></path></svg>')
+    no-repeat center;
+  background-size: 20px 20px;
+}
+
+.zoomable-overlay .close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.41421%20-0.000151038L0%201.41406L21.2132%2022.6273L22.6274%2021.2131L1.41421%20-0.000151038Z" fill="%23000000"></path><path d="M22.6291%201.41421L21.2148%200L0.00164068%2021.2132L1.41585%2022.6274L22.6291%201.41421Z" fill="%23000000"></path></svg>')
+    no-repeat center;
+  background-size: contain;
+}
+
+.zoomable-overlay .arrows {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 98%;
+  pointer-events: none;
+  bottom: 30%;
+  align-items: baseline;
+}
+
+.zoomable-overlay .arrow {
+  font-size: 18px;
+  font-weight: 100;
+  color: var(--main-color);
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  pointer-events: auto;
+  transition: transform 0.2s;
+  max-width: 95%;
+}
+
+.zoomable-overlay .arrow:hover {
+  transform: scale(1.2);
+}
+
+.arrow.left {
+  background: url("../img/sertificates/left.svg") no-repeat center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+}
+
+.arrow.right {
+  background: url("../img/sertificates/right.svg") no-repeat center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.reviews__icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.reviews__name {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.reviews__text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.reviews__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.reviews__description {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
