@@ -17,18 +17,20 @@
         <nav class="header__nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link">Бетонные смеси</a>
+              <a href="#smesi" class="nav__link">Бетонные смеси</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Спецтехника</a>
+              <a href="#spectechnika" class="nav__link">Спецтехника</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Как работаем</a>
+              <a href="#works" class="nav__link">Как работаем</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Сертификаты</a>
+              <a href="#sert" class="nav__link">Сертификаты</a>
             </li>
-            <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+            <li class="nav__item">
+              <a href="#reviews" class="nav__link">Отзывы</a>
+            </li>
           </ul>
         </nav>
 
@@ -38,10 +40,10 @@
 
         <div class="header__contacts">
           <a href="tel:+375447690707" class="contacts__phone"
-            >+375 44 769-07-07</a
+            ><strong>+375 44 769-07-07</strong></a
           >
           <a href="tel:+375295972972" class="contacts__phone"
-            >+375 29 597-29-72</a
+            ><strong>+375 29 597-29-72</strong></a
           >
         </div>
       </div>
@@ -53,8 +55,10 @@
             Доставка бетона<br />Минск и Минский район
           </h1>
           <p class="offer__description">
-            Собственное производство. Без посредников.<br />
-            Любой объем. Быстрая доставка. Работаем 24/7 без выходных.
+            <strong
+              >Собственное производство. Без посредников.<br />
+              Любой объем. Быстрая доставка. Работаем 24/7 без выходных.</strong
+            >
           </p>
           <div class="offer__image-wrapper">
             <img
@@ -68,7 +72,7 @@
           </div>
         </div>
       </section>
-      <section class="table">
+      <section class="table" id="smesi">
         <div class="table__container">
           <table class="table__price">
             <thead class="table__head">
@@ -127,7 +131,7 @@
           </table>
           <div class="table-mobile">
             <div class="table-mobile__column">
-              <h3 class="table-mobile__heading">Бетон на гравии</h3>
+              <h3 class="table-mobile__heading">БЕТОН НА ГРАВИИ</h3>
               <ul class="table-mobile__list">
                 <li class="table-mobile__item">M100 (с 8/10)</li>
                 <li class="table-mobile__item">M150 (с 10/12,5)</li>
@@ -141,7 +145,7 @@
             </div>
 
             <div class="table-mobile__column">
-              <h3 class="table-mobile__heading">Бетон на щебне</h3>
+              <h3 class="table-mobile__heading">БЕТОН НА ЩЕБНЕ</h3>
               <ul class="table-mobile__list">
                 <li class="table-mobile__item">M150 (с 10/12,5)</li>
                 <li class="table-mobile__item">M200 (с 12/15)</li>
@@ -155,7 +159,7 @@
             </div>
 
             <div class="table-mobile__column">
-              <h3 class="table-mobile__heading">Бетонный раствор/ЦПС</h3>
+              <h3 class="table-mobile__heading">БЕТОННЫЙ РАСТВОР/ЦПС</h3>
               <ul class="table-mobile__list">
                 <li class="table-mobile__item">M50</li>
                 <li class="table-mobile__item">M100</li>
@@ -173,18 +177,20 @@
             <p class="table__text">
               Актуальные цены у менеджера
               <a class="table__phone" href="tel:+375447690707"
-                >+375 44 769-07-07</a
+                ><strong>+375 44 769-07-07</strong></a
               >
               <a class="table__phone" href="tel:+375295972972"
-                >+375 29 597-29-72</a
+                ><strong>+375 29 597-29-72</strong></a
               >
             </p>
           </div>
         </div>
       </section>
-      <section class="special__equipment">
+      <section class="special__equipment" id="spectechnika">
         <div class="special__equipment-container">
-          <h2 class="special__equipment-title">Спецтехника</h2>
+          <h2 class="special__equipment-title">
+            <strong>Спецтехника</strong>
+          </h2>
           <p class="special__equipment-description">
             Доставка бетона собственным транспортом в нужное<br />
             Вам место и время
@@ -406,7 +412,7 @@
           </div>
         </div>
       </section>
-      <section class="work__stage">
+      <section class="work__stage" id="works">
         <div class="work__stage-container">
           <h2 class="work__stage-title">Этапы работы</h2>
 
@@ -450,7 +456,7 @@
       </section>
       <section class="our__sertificates">
         <div class="our__sertificates-container">
-          <h2 class="our__sertificates-title">Сертификаты</h2>
+          <h2 class="our__sertificates-title" id="sert">Сертификаты</h2>
 
           <div class="our__sertificates-grid">
             <div class="our__sertificates-item">
@@ -496,17 +502,19 @@
           </div>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="reviews__container">
           <h2 class="reviews__title">Отзывы</h2>
           <p class="reviews__description">Отзывы наших клиентов</p>
           <div class="reviews__grid">
             <div class="reviews__item">
-              <img
-                src="./assets/img/profile.webp"
-                alt="Иконка пользователя"
-                class="reviews__icon"
-              />
+              <div class="reviews__icon-wrapper">
+                <img
+                  src="./assets/img/profile.webp"
+                  alt="Иконка пользователя"
+                  class="reviews__icon"
+                />
+              </div>
               <h3 class="reviews__name">Сергей</h3>
               <p class="reviews__text">
                 В качестве поставщика показали себя исключительно с лучшей
@@ -517,11 +525,13 @@
               </p>
             </div>
             <div class="reviews__item">
-              <img
-                src="./assets/img/profile.webp"
-                alt="Иконка пользователя"
-                class="reviews__icon"
-              />
+              <div class="reviews__icon-wrapper">
+                <img
+                  src="./assets/img/profile.webp"
+                  alt="Иконка пользователя"
+                  class="reviews__icon"
+                />
+              </div>
               <h3 class="reviews__name">Александр</h3>
               <p class="reviews__text">
                 Компания проверена временем. С ними работали по нескольким
@@ -532,11 +542,13 @@
               </p>
             </div>
             <div class="reviews__item">
-              <img
-                src="./assets/img/profile.webp"
-                alt="Иконка пользователя"
-                class="reviews__icon"
-              />
+              <div class="reviews__icon-wrapper">
+                <img
+                  src="./assets/img/profile.webp"
+                  alt="Иконка пользователя"
+                  class="reviews__icon"
+                />
+              </div>
               <h3 class="reviews__name">Олег</h3>
               <p class="reviews__text">
                 Хотел бы поблагодарить за взаимовыгодное сотрудничество. Начали
@@ -547,11 +559,13 @@
               </p>
             </div>
             <div class="reviews__item">
-              <img
-                src="./assets/img/profile.webp"
-                alt="Иконка пользователя"
-                class="reviews__icon"
-              />
+              <div class="reviews__icon-wrapper">
+                <img
+                  src="./assets/img/profile.webp"
+                  alt="Иконка пользователя"
+                  class="reviews__icon"
+                />
+              </div>
               <h3 class="reviews__name">Дмитрий</h3>
               <p class="reviews__text">
                 Не первый год сотрудничаем. Одна из старейших компаний на рынке
@@ -561,11 +575,13 @@
               </p>
             </div>
             <div class="reviews__item">
-              <img
-                src="./assets/img/profile.webp"
-                alt="Иконка пользователя"
-                class="reviews__icon"
-              />
+              <div class="reviews__icon-wrapper">
+                <img
+                  src="./assets/img/profile.webp"
+                  alt="Иконка пользователя"
+                  class="reviews__icon"
+                />
+              </div>
               <h3 class="reviews__name">Валерий</h3>
               <p class="reviews__text">
                 О компании сложилось только положительное впечатление. С
@@ -576,11 +592,13 @@
               </p>
             </div>
             <div class="reviews__item">
-              <img
-                src="./assets/img/profile.webp"
-                alt="Иконка пользователя"
-                class="reviews__icon"
-              />
+              <div class="reviews__icon-wrapper">
+                <img
+                  src="./assets/img/profile.webp"
+                  alt="Иконка пользователя"
+                  class="reviews__icon"
+                />
+              </div>
               <h3 class="reviews__name">Евгений</h3>
               <p class="reviews__text">
                 Примите слова благодарности от постоянного клиента. Работаю с

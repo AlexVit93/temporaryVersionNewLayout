@@ -1,3 +1,8 @@
+@media (max-width: 8192px) {
+  .table-mobile {
+    display: none;
+  }
+}
 @media (max-width: 1366px) {
   .header__nav {
     left: 30px;
@@ -142,64 +147,17 @@
   .advantages__card-description {
     font-size: 14px;
   }
-  .work__stage-timeline {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0 60px;
-    position: relative;
-    max-width: 640px;
-    margin: 0 auto;
-    padding-left: 20px;
-  }
 
-  .work__stage-line {
-    position: absolute;
-    left: 40px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: var(--timeline-color);
-    z-index: 0;
-  }
-
-  .work__stage-item {
-    display: contents;
-  }
-
-  .work__stage-circle {
-    grid-column: 1;
-    width: 40px;
-    height: 40px;
-    background-color: var(--button-color);
-    color: var(--background-color);
-    font-weight: 700;
-    font-size: 16px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-  }
-
-  .work__stage-subtitle,
-  .work__stage-description {
-    grid-column: 2;
-  }
-
-  .work__stage-subtitle {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0 0 8px;
-  }
-
-  .work__stage-description {
-    font-size: 14px;
-    line-height: 1.4;
-    margin: 0 0 20px;
+  .our__sertificates-title {
+    margin-bottom: 10vh;
   }
 
   .reviews__grid {
     grid-template-columns: 1fr;
+    gap: 12vh;
+  }
+  .reviews__description {
+    margin-bottom: 10vh;
   }
   .footer__banner {
     padding: 25vw 5vw;
@@ -223,6 +181,60 @@
 @media (max-width: 860px) {
   .work__stage-line {
     height: 30rem;
+  }
+  .work__stage-timeline {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 0 20px;
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-left: 20px;
+    margin-left: 22vw;
+  }
+
+  .work__stage-line {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--timeline-color);
+    z-index: 0;
+  }
+
+  .work__stage-item {
+    display: contents;
+  }
+
+  .work__stage-circle {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    background-color: var(--button-color);
+    color: var(--background-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    z-index: 1;
+  }
+
+  .work__stage-subtitle {
+    grid-column: 2;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 8px 0 4px;
+    line-height: 1.2;
+  }
+
+  .work__stage-description {
+    grid-column: 2;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 20px;
   }
 }
 
@@ -291,6 +303,61 @@
   .header__container {
     padding: 10px 15px;
     gap: 12px;
+  }
+  .work__stage-timeline {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 60px;
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+
+  .work__stage-line {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--timeline-color);
+    z-index: 0;
+  }
+
+  .work__stage-item {
+    display: contents;
+  }
+
+  .work__stage-circle {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+    background-color: var(--button-color);
+    color: var(--background-color);
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .work__stage-subtitle,
+  .work__stage-description {
+    grid-column: 2;
+  }
+
+  .work__stage-subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+
+  .work__stage-description {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 20px;
   }
 }
 
